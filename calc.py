@@ -1,14 +1,17 @@
 import sys
 
-operation = sys.argv
-num1,num2 =int(operation[2]),int(operation[3])
-if operation[1] == "add":
-    result = num1+num2
-elif operation[1] == "sub":
-    result = num1-num2
-elif operation[1] == "mul":
-    result = num1*num2
+expression = sys.argv
+operand_1, operand_2 = int(expression[2]), int(expression[3])
+operation = expression[1]
+
+if operation == "add":
+    result = operand_1 + operand_2
+elif operation == "sub":
+    result = operand_1 - operand_2
+elif operation == "mul":
+    result = operand_1 * operand_2
 else:
-    result = num1/num2
+    result = operand_1 / operand_2
+    
 print(result)
     
