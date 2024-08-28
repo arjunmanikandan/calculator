@@ -1,9 +1,8 @@
 import sys
 
 def calc_expression(expression):
-    expression = sys.argv
-    operand_1, operand_2 = int(expression[2]), int(expression[3])
-    operation = expression[1]
+    operation = expression[0]
+    operand_1, operand_2 = int(expression[1]), int(expression[2])
 
     if operation == "add":
         result = operand_1 + operand_2
@@ -15,6 +14,3 @@ def calc_expression(expression):
         result = operand_1 / operand_2
 
     return result
-
-if __name__ == "__main__":
-    calc_expression()
